@@ -21,8 +21,8 @@
                        highRefreshRate: true;
                        physicallyCorrectLights: true;
                        castShadow: true;"
-              light="defaultLightsEnabled: false;">
-            <!--  background="color:white;"-->
+              light="defaultLightsEnabled: false;"
+              background="color:black;">
 
 <!--LOADING IN ASSETS-->
       <a-assets>
@@ -35,14 +35,16 @@
 
 <!--camera-->
 
-      <a-entity camera look-controls active="true" wasd-controls="fly:true; acceleration:400" position="60 10 530" ></a-entity>
+      <a-entity camera look-controls active="true" wasd-controls="fly:true; acceleration:500" position="50 -80 600" ></a-entity>
+  <a-entity text="value: PAIKKA;"></a-entity>
+<a-entity rotation="-20 227 0">
 
-<a-entity rotation="0 235 0">
-      <a-sky src="#background" rotation="000 20 -300"></a-sky>
+      <a-sky src="#background" rotation="000 20 -300" animation="property: rotation; to: 0 360 0; loop: true; dur: 150000"></a-sky>
       <a-entity gltf-model="#paikka2"
                  	  scale="5.5 5.5 5.5"
                  		position="0 -95 0"
-                 	  rotation="-3 0 0">
+                 	  rotation="-3 0 0"
+                    animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
       </a-entity>
 </a-entity>
     </a-scene>
