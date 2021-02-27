@@ -28,16 +28,16 @@
       <a-assets>
         <!--<a-asset-item id="paikka" src="./gltf_files/firstrun.gltf"></a-asset-item>-->
         <a-asset-item id="paikka2" src="./gltf_files/firstrun2.gltf"></a-asset-item>
-        <img id="background" src="./backgrounds/7.png">
+        <img id="background" src="./backgrounds/untitled2.png">
       </a-assets>
 
 <!--TWEAKING ASSETS' BEHAVIOUR-->
 
 <!--camera-->
-      <a-entity camera look-controls active="true" wasd-controls="acceleration:300; fly:true;" position="0 -50 0" ></a-entity>
+      <a-entity camera look-controls active="true" wasd-controls="fly:true; acceleration:400" position="0 -50 0" ></a-entity>
 
         <!--<a-sky color="#000000"></a-sky>-->
-      <a-sky src="#background"></a-sky>
+      <a-sky src="#background" rotation="000 20 -300"></a-sky>
       <a-entity gltf-model="#paikka2"
                  	  scale="5.5 5.5 5.5"
                  		position="0 -95 0"
