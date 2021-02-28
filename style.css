@@ -1,0 +1,25 @@
+#cim_holder{
+display: none;
+}
+
+#button_holder{
+  display: none;
+}
+
+p{
+  color:red;
+  font-size:50px;
+  position: fixed;
+  margin:auto;
+  left:30%;
+  right:70%;
+  top:10%;
+  padding-right: 90%;
+}
+
+button{
+  position: fixed;
+  margin:auto;
+  left:50%;
+  top:80%;
+}

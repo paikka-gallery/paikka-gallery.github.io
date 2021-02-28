@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PAIKKA OPEN CALL 2021</title>
+    <script src="./scripts/aframe.min.js"></script>
+    <script src="./scripts/jquery.min.js"></script>
+  <!--   <script src="./scripts/aframe-video-controls.min.js"></script>
+    <script src="./scripts/hls.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/shaka-player.compiled.js"></script>
+    <script src="./scripts/shaka-loader.js"></script>
+   <link rel="stylesheet" href="../../styles/style.css">-->
+  </head>
+  <body>
+<!--MAIN SCENE SETTINGS-->
+    <a-scene renderer="antialias: true;
+                       colorManagement: true;
+                       sortObjects: true;
+                       highRefreshRate: true;
+                       physicallyCorrectLights: true;
+                       castShadow: true;"
+              light="defaultLightsEnabled: false;"
+              background="color:black;"
+              loading-screen="dotsColor: white; backgroundColor: black">
+<!--LOADING IN ASSETS-->
+      <a-assets>
+        <!--<a-asset-item id="paikka" src="./gltf_files/firstrun.gltf"></a-asset-item>-->
+        <a-asset-item id="paikka2" src="./gltf_files/firstrun2.gltf"></a-asset-item>
+        <audio id="universe" src="./audio/1.mp3" preload="auto"></audio>
+        <img id="background" src="./backgrounds/jpg8k.jpg">
+      </a-assets>
+<!--TWEAKING ASSETS' BEHAVIOUR-->
+      <a-entity camera look-controls active="true" wasd-controls="fly:true; acceleration:500" position="50 -80 600" ></a-entity>
+    <!--  <a-entity id="text_holder" position="80 150 0">
+        <a-entity text="font: roboto; value: PAIKKA; width:1000;"></a-entity>
+      </a-entity>-->
+      <a-entity sound="src: #universe" autoplay: "true"></a-entity>
+      <a-entity id="scene_holder" rotation="-20 227 0">
+        <a-sky src="#background" rotation="000 20 -300" animation="property: rotation; to: 0 360 0; loop: true; dur: 150000"></a-sky>
+        <a-entity gltf-model="#paikka2"
+                  scale="5.5 5.5 5.5"
+                  position="0 -95 0"
+                  rotation="-3 0 0"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
