@@ -13,6 +13,10 @@
    <link rel="stylesheet" href="../../styles/style.css">-->
   </head>
   <body>
+    <div id="audio_holder">
+		<audio id="audio_homepage" preload="auto" autoplay loop>
+				<source src="./audio/2.mp3" type="audio/mp3">
+			</audio>
 <!--MAIN SCENE SETTINGS-->
     <a-scene renderer="antialias: true;
                        colorManagement: true;
@@ -26,7 +30,7 @@
 <!--LOADING IN ASSETS-->
       <a-assets>
         <a-asset-item id="paikka2" src="./gltf_files/firstrun2.gltf"></a-asset-item>
-        <audio id="universe" src="./audio/2.mp3" preload="auto" autoplay></audio>
+      <!--  <audio id="universe" src="./audio/2.mp3" preload="auto" autoplay></audio-->
         <img id="background" src="./backgrounds/jpg8k.jpg">
       </a-assets>
 <!--TWEAKING ASSETS' BEHAVIOUR-->
