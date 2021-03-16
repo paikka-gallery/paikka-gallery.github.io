@@ -13,10 +13,6 @@
    <link rel="stylesheet" href="../../styles/style.css">-->
   </head>
   <body>
-    <div id="audio_holder">
-		<audio id="audio_homepage" preload="auto" autoplay loop>
-				<source src="./audio/1.mp3" type="audio/mp3">
-			</audio>
 <!--MAIN SCENE SETTINGS-->
     <a-scene renderer="antialias: true;
                        colorManagement: true;
@@ -29,9 +25,8 @@
               loading-screen="dotsColor: white; backgroundColor: black">
 <!--LOADING IN ASSETS-->
       <a-assets>
-        <!--<a-asset-item id="paikka" src="./gltf_files/firstrun.gltf"></a-asset-item>-->
         <a-asset-item id="paikka2" src="./gltf_files/firstrun2.gltf"></a-asset-item>
-        <!--<audio id="universe" src="./audio/1.mp3" preload="auto" autoplay: "true"></audio>-->
+        <audio id="universe" src="./audio/2.mp3" preload="auto" autoplay></audio>
         <img id="background" src="./backgrounds/jpg8k.jpg">
       </a-assets>
 <!--TWEAKING ASSETS' BEHAVIOUR-->
@@ -39,10 +34,15 @@
     <!--  <a-entity id="text_holder" position="80 150 0">
         <a-entity text="font: roboto; value: PAIKKA; width:1000;"></a-entity>
       </a-entity>-->
-    <!--  <a-entity id="river" geometry="primitive: sky"
-          position="0 0 0" sound="src: url(./audio/1.mp3); autoplay: true"></a-entity>-->
+    <!--  <a-entity geometry="primitive: box" material="color: red"
+        position="0 -100 0" scale: "100 100 100" sound="src: #universe;
+             rolloffFactor: 5;
+             maxDistance:10;"></a-entity>-->
       <a-entity id="scene_holder" rotation="-20 227 0">
-        <a-sky src="#background" rotation="000 20 -300" animation="property: rotation; to: 0 360 0; loop: true; dur: 150000"></a-sky>
+        <a-sky src="#background"
+               rotation="000 20 -300"
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
+        </a-sky>
         <a-entity gltf-model="#paikka2"
                   scale="5.5 5.5 5.5"
                   position="0 -95 0"
