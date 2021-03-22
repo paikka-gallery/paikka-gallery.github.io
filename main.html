@@ -108,14 +108,7 @@
             loop="true"
             volume="3"
             position="29.681 17.386 -71.697">
-          </a-sound>
-          <a-sound
-            src="#universe"
-            autoplay="true"
-            loop="true"
-            volume="3"
-            position="27.839 16.455 -45.904">
-          </a-sound> -->
+          </a-sound>-->
           <a-entity gltf-model="#lepel"
                     scale="5.5 5.5 5.5"
                     position="0 -95 0"
@@ -128,8 +121,22 @@
                     rotation="-3 0 0"
                     animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
           </a-entity>
-          <a-entity sound=src:"#universe; autoplay:true" position=" 1 -95 1">
-          </a-sound>
+          <a-entity visible="false" position="22.333 -37.890 -74.630" geometry="primitive: cylinder" scale="220 100 220" sound="src:#gallery;
+          autoplay:true;
+          loop:true;
+          volume:1;
+          refDistance: 60;
+          rolloffFactor: 5;
+          maxDistance:1000">
+          </a-entity>
+          sound="src:#universe;
+          autoplay:true;
+          loop:true;
+          volume:1;
+          refDistance: 60;
+          rolloffFactor: 5;
+          maxDistance:1000"
+          </a-entity>
         </a-entity>
       </a-entity>
     </a-scene>
