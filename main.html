@@ -15,6 +15,15 @@
     <script src="./scripts/shaka-loader.js"></script>
    <link rel="stylesheet" href="../../styles/style.css">-->
    </script>
+   <script>
+  AFRAME.registerComponent("mylink", {
+    init: function() {
+    this.el.addEventListener("click", (e)=> {
+          window.location = this.data.href;
+    })
+    }
+  })
+</script>
   </head>
   <body>
 
@@ -56,7 +65,8 @@
         <img id="background" src="./backgrounds/jpg8k.jpg">
         <audio id="gallery" src="./audio/test.mp3" preload="auto"></audio>
         <audio id="universe" src="./audio/2_gain_opus.opus" preload="auto"></audio>
-        <img id="previewDefault"  src="./images/image.jpg">
+        <img id="kep1"  src="./images/image3.jpg">
+        <img id="kep2"  src="./images/image2.png">
       </a-assets>
 <!--TWEAKING ASSETS' BEHAVIOUR-->
       <a-entity camera look-controls active="true" wasd-controls="fly:true; acceleration:500" position="50 -80 600" ></a-entity>
@@ -128,7 +138,24 @@
     <!--    <a-entity
           sound="src:#universe; autoplay:true; loop:true; volume:1; refDistance: 60; rolloffFactor: 5; maxDistance:1000">
         </a-entity>-->
-          <a-entity link="href:https://forms.gle/KGTbDyUfQrHJ7A3i6; title:enter uplaod section; image:#previewDefault; peekMode:true; backgroundColor:black; highlightedColor:white" position="-2 1.6 -5">
+        <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
+          <a-link position="64.633 -50.503 -100.298"
+                  rotation="0 150 13.385"
+                  scale="6 6 6"
+                  href="https://forms.gle/KGTbDyUfQrHJ7A3i6"
+                  title="enter upload section"
+                  image="#kep1">
+          </a-link>
+        </a-entity>
+        <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
+          <a-link position="106.189 -65.349 -4.305"
+                  rotation="-7.114 50.000 13.385"
+                  scale="6 6 6"
+                  href="https://images.squarespace-cdn.com/content/5bca95c7c2ff614474b4e308/1551232338873-I7D0MRA1NWX7LSUABAXD/floorplan.png?content-type=image%2Fpng"
+                  title="floorplan"
+                  image="#kep2"
+                  animation="property: rotation; to: 0 -360 0; loop: true; dur: 150000">
+          </a-link>
           </a-entity>
         </a-entity>
       </a-entity>
