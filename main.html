@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PAIKKA OPEN CALL 2021</title>
     <script src="./scripts/aframe.min.js"></script>
+    <script src="./scripts/link-controls.js"></script>
     <script src="./scripts/jquery.min.js"></script>
 <!--<script src="./scripts/aframe-video-controls.min.js"></script>
     <script src="./scripts/hls.min.js"></script>
@@ -42,23 +43,20 @@
       init();
     </script>-->
 <!--MAIN SCENE SETTINGS-->
-    <a-scene renderer="antialias: true;
-                       colorManagement: true;
-                       sortObjects: true;
-                       highRefreshRate: true;
-                       physicallyCorrectLights: true;
-                       castShadow: true;"
+    <a-scene renderer="antialias: true; colorManagement: true; sortObjects: true; highRefreshRate: true; physicallyCorrectLights: true; castShadow: true;"
               light="defaultLightsEnabled: false;"
               background="color:black;"
-              loading-screen="dotsColor: white; backgroundColor: black">
+              loading-screen="dotsColor: white; backgroundColor: black;"
+              cursor="rayOrigin: mouse;"
+              raycaster="far: 100; objects: [link]">
 <!--LOADING IN ASSETS-->
       <a-assets>
-        <a-asset-item id="gallery" src="./gltf_files/gallery_text2.gltf"></a-asset-item>
+        <a-asset-item id="gallery" src="./gltf_files/gallery_text3.gltf"></a-asset-item>
         <a-asset-item id="lepel" src="./gltf_files/lepel.gltf"></a-asset-item>
-      <!--  <audio id="universe" src="./audio/2.mp3" preload="auto" autoplay></audio-->
         <img id="background" src="./backgrounds/jpg8k.jpg">
         <audio id="gallery" src="./audio/test.mp3" preload="auto"></audio>
         <audio id="universe" src="./audio/2_gain_opus.opus" preload="auto"></audio>
+        <img id="previewDefault"  src="./images/image.jpg">
       </a-assets>
 <!--TWEAKING ASSETS' BEHAVIOUR-->
       <a-entity camera look-controls active="true" wasd-controls="fly:true; acceleration:500" position="50 -80 600" ></a-entity>
@@ -121,21 +119,16 @@
                     rotation="-3 0 0"
                     animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
           </a-entity>
-          <a-entity visible="false" position="22.333 -37.890 -74.630" geometry="primitive: cylinder" scale="220 100 220" sound="src:#gallery;
-          autoplay:true;
-          loop:true;
-          volume:1;
-          refDistance: 60;
-          rolloffFactor: 5;
-          maxDistance:1000">
+          <a-entity visible="false"
+                    position="22.333 -37.890 -74.630"
+                    geometry="primitive: cylinder"
+                    scale="220 100 220"
+                    sound="src:#universe; autoplay:true; loop:true; volume:1; refDistance: 60; rolloffFactor: 5; maxDistance:1000">
           </a-entity>
-          sound="src:#universe;
-          autoplay:true;
-          loop:true;
-          volume:1;
-          refDistance: 60;
-          rolloffFactor: 5;
-          maxDistance:1000"
+    <!--    <a-entity
+          sound="src:#universe; autoplay:true; loop:true; volume:1; refDistance: 60; rolloffFactor: 5; maxDistance:1000">
+        </a-entity>-->
+          <a-entity link="href:https://forms.gle/KGTbDyUfQrHJ7A3i6; title:enter uplaod section; image:#previewDefault; peekMode:true; backgroundColor:black; highlightedColor:white" position="-2 1.6 -5">
           </a-entity>
         </a-entity>
       </a-entity>
