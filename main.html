@@ -62,6 +62,8 @@
       <a-assets>
         <a-asset-item id="gallery" src="./gltf_files/gallery_text3.gltf"></a-asset-item>
         <a-asset-item id="lepel" src="./gltf_files/lepel.gltf"></a-asset-item>
+        <a-asset-item id="virag" src="./gltf_files/virag.gltf"></a-asset-item>
+        <a-asset-item id="gömb" src="./gltf_files/gömb.gltf"></a-asset-item>
         <img id="background" src="./backgrounds/jpg8k.jpg">
         <audio id="gallery" src="./audio/test.mp3" preload="auto"></audio>
         <audio id="universe" src="./audio/2_gain_opus.opus" preload="auto"></audio>
@@ -129,35 +131,26 @@
                     rotation="-3 0 0"
                     animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
           </a-entity>
+          <a-entity gltf-model="#virag"
+                    scale="5.5 5.5 5.5"
+                    position="0 -95 0"
+                    rotation="-3 0 0"
+                    animation="property: rotation; to: 0 360 0; loop: true; dur: 150000"
+                    link="href: https://forms.gle/KGTbDyUfQrHJ7A3i6; title: enter upload section;">
+          </a-entity>
+          <a-entity gltf-model="#gömb"
+                    scale="5.5 5.5 5.5"
+                    position="0 -95 0"
+                    rotation="-3 0 0"
+                    animation="property: rotation; to: 0 360 0; loop: true; dur: 150000"
+                    link="href: https://images.squarespace-cdn.com/content/5bca95c7c2ff614474b4e308/1551232338873-I7D0MRA1NWX7LSUABAXD/floorplan.png?content-type=image%2Fpng; title: floorplan;">
+          </a-entity>
           <a-entity visible="false"
                     position="22.333 -37.890 -74.630"
                     geometry="primitive: cylinder"
                     scale="220 100 220"
                     sound="src:#universe; autoplay:true; loop:true; volume:1; refDistance: 60; rolloffFactor: 5; maxDistance:1000">
           </a-entity>
-    <!--    <a-entity
-          sound="src:#universe; autoplay:true; loop:true; volume:1; refDistance: 60; rolloffFactor: 5; maxDistance:1000">
-        </a-entity>-->
-        <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
-          <a-link position="64.633 -50.503 -100.298"
-                  rotation="0 150 13.385"
-                  scale="6 6 6"
-                  href="https://forms.gle/KGTbDyUfQrHJ7A3i6"
-                  title="enter upload section"
-                  image="#kep1">
-          </a-link>
-        </a-entity>
-        <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
-          <a-link position="106.189 -65.349 -4.305"
-                  rotation="-7.114 50.000 13.385"
-                  scale="6 6 6"
-                  href="https://images.squarespace-cdn.com/content/5bca95c7c2ff614474b4e308/1551232338873-I7D0MRA1NWX7LSUABAXD/floorplan.png?content-type=image%2Fpng"
-                  title="floorplan"
-                  image="#kep2"
-                  animation="property: rotation; to: 0 -360 0; loop: true; dur: 150000">
-          </a-link>
-          </a-entity>
-        </a-entity>
       </a-entity>
     </a-scene>
   </body>
