@@ -70,10 +70,10 @@ sceneEl.object3D.traverse((o) => {
               raycaster="far: 100; objects: [link]">
 <!--LOADING IN ASSETS-->
       <a-assets>
-        <a-asset-item id="gallery" src="./gltf_files/gallery_text4.gltf"></a-asset-item>
-    <a-asset-item id="lepel" src="./gltf_files/lepel.gltf"></a-asset-item>
-        <a-asset-item id="virag" src="./gltf_files/virag.gltf"></a-asset-item>
-        <a-asset-item id="dirt" src="./gltf_files/dirt.gltf"></a-asset-item>
+        <a-asset-item id="gallery" src="./gltf_files/gallery_text5.gltf"></a-asset-item>
+    <a-asset-item id="lepel" src="./gltf_files/lepel3.gltf"></a-asset-item>
+        <a-asset-item id="virag" src="./gltf_files/virag2.gltf"></a-asset-item>
+        <a-asset-item id="dirt" src="./gltf_files/dirt5.gltf"></a-asset-item>
         <img id="background" src="./backgrounds/jpg8k.jpg">
         <audio id="gallery" src="./audio/test.mp3" preload="auto"></audio>
         <audio id="universe" src="./audio/2_gain_opus.opus" preload="auto"></audio>
@@ -141,7 +141,6 @@ sceneEl.object3D.traverse((o) => {
                     rotation="-3 0 0"
                     animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
           </a-entity>
-
           <a-entity gltf-model="#virag"
                     scale="5.5 5.5 5.5"
                     position="0 -95 0"
@@ -155,6 +154,10 @@ sceneEl.object3D.traverse((o) => {
                     rotation="-3 0 0"
                     animation="property: rotation; to: 0 360 0; loop: true; dur: 150000"
                     link="href: https://images.squarespace-cdn.com/content/5bca95c7c2ff614474b4e308/1551232338873-I7D0MRA1NWX7LSUABAXD/floorplan.png?content-type=image%2Fpng; title: floorplan;">
+          </a-entity>
+          <a-entity position="-1 2 0" text="width: 2; lineHeight: 50; letterSpacing: 5; color: white; value:  upload">
+          </a-entity>
+          <a-entity position="-1 2 0" scale="100 200 200" text="width: 2; lineHeight: 50; letterSpacing: 5; color: white; value:  floorplan">
           </a-entity>
           <a-entity visible="false"
                     position="22.333 -37.890 -74.630"
