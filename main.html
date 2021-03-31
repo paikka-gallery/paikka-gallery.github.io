@@ -24,21 +24,8 @@
     }
   })
 </script>
-<script>
-sceneEl.addEventListener('loaded', function (e) => {
-sceneEl.object3D.traverse((o) => {
-  if (o.isMesh && o.material.map)  {
-    o.material.map.encoding = THREE.sRGBEncoding;
-    o.material.needsUpdate = true;
-  }
-});
-});
-</script>
   </head>
   <body>
-
-
-
 <!--    <audio id="gallery" preload="auto">
 			<source src="./audio/test.mp3" type="audio/mp3">
 		</audio>-->
