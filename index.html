@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0"/>
-    <title></title>
+    <title>PAIKKA</title>
     <script src="./scripts/aframe.min.js"></script>
     <script src="./scripts/jquery.min.js"></script>
     <link rel="stylesheet" href="./style.css"/>
@@ -20,20 +20,20 @@
   </head>
   <body>
     <div id="video_holder">
-			<video id="video_homepage" autoplay="autoplay" muted loop>
-			  <source src="./videos/4k_optical_15_color.mp4" type="video/mp4">
+			<video id="video_homepage" autoplay="autoplay" muted loop preload="auto">
+			  <source src="./videos/4k_optical_20_color.mp4" type="video/mp4">
 			</video>
     </div>
     <div id="button_holder">
-      <button onclick="someFunc()">enter here</button>
+      <button onclick="someFunc()">enter</button>
     </div>
     <script type="text/javascript">
     $(document).ready(function someFunc() {
-$("button").click(function() {
-  var test = $("body").css("background-color", "white");
-  test.delay(1500).fadeOut(1500);
-  test.queue(function() {
-    window.location.href='./main.html';
+      $("button").click(function() {
+        var test = $("body").css("background-color", "white");
+        test.delay(1500).fadeOut(1500);
+        test.queue(function() {
+          window.location.href='./main.html';
     });
   });
 });
