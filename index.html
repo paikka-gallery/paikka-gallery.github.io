@@ -4,11 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0"/>
     <title>PAIKKA</title>
-    <script src="./scripts/aframe.min.js"></script>
     <script src="./scripts/jquery.min.js"></script>
     <link rel="stylesheet" href="./style.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Thasadith&display=swap" rel="stylesheet">
     <script id="megjelenik">
 		$(document).ready(function(){
 				$("#cim_holder").delay(1000).fadeIn(1500);
@@ -20,7 +18,7 @@
   </head>
   <body>
     <div id="video_holder">
-			<video id="video_homepage" autoplay="autoplay" muted loop preload="auto">
+			<video id="video_homepage" autoplay="autoplay" muted loop>
 			  <source src="./videos/4k_optical_20_color.mp4" type="video/mp4">
 			</video>
     </div>
@@ -37,15 +35,6 @@
     });
   });
 });
-  /*
-      /*  $(document).ready(function(){
-          $("body").delay(1000).fadeOut(1500);
-        });
-
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-        window.location.href='./main.html';
-      }*/
     </script>
 
   </body>
