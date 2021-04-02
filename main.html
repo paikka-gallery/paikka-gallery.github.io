@@ -25,13 +25,6 @@
     }
   })
 </script>
-<style>
-  button{
-    position: fixed;
-    width: 5%;
-    height: 5%;
-  }
-</style>
   </head>
   <body>
 <!--MAIN SCENE SETTINGS-->
@@ -53,7 +46,7 @@
         <audio id="universe" src="./audio/2_gain_opus.opus" preload="auto"></audio>
       </a-assets>
 <!--TWEAKING ASSETS' BEHAVIOUR-->
-      <a-entity camera look-controls active="true" wasd-controls="fly:true; acceleration:500" position="50 -80 600" ></a-entity>
+      <a-entity camera look-controls active="true" wasd-controls="fly:true; acceleration:500" position="80 -80 545" ></a-entity>
       <a-entity id="scene_holder" rotation="-20 227 0">
           <!-- animation="property: rotation; to: 0 360; loop: true; dur: 15"> //EZ EGY NAGYON SZÉP BUG:DURATION SET TO LOW VALUE MEANS GLITCHING TEXTURES
           </a-entity> -->
@@ -86,6 +79,18 @@
                     rotation="-3 0 0"
                     animation="property: rotation; to: 0 360 0; loop: true; dur: 150000"
                     link="href: https://images.squarespace-cdn.com/content/5bca95c7c2ff614474b4e308/1551232338873-I7D0MRA1NWX7LSUABAXD/floorplan.png?content-type=image%2Fpng; title: floorplan;">
+          </a-entity>
+          <!--<a-entity text="value: welcome to paikka,
+            seems a little quiet here, how about some flying?"
+                    scale="22 22 22"
+                    position="360 69 -390"
+                    rotation="0 190 10">
+          </a-entity>-->
+          <a-entity text="value: welcome to paikka,
+            seems a little quiet here, how about some flying?"
+                    scale="30 30 30"
+                    position="322 82 -406"
+                    rotation="55 158 25.85">
           </a-entity>
           <a-entity visible="false"
                     position="22.333 -37.890 -74.630"

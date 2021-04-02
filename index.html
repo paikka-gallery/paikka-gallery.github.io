@@ -6,15 +6,17 @@
     <title>PAIKKA</title>
     <script src="./scripts/jquery.min.js"></script>
     <link rel="stylesheet" href="./style.css"/>
-    <script id="megjelenik">
+ <script id="flashing">
 		$(document).ready(function(){
-				$("#cim_holder").delay(1000).fadeIn(1500);
-        $("#button_holder").delay(1000).fadeIn(1500);
+			/*	$("#cim_holder").delay(1000).fadeIn(1500);
+        $("#button_holder").delay(1000).fadeIn(1500);*/
         setInterval(function(){
-        $("i").delay(700).fadeToggle(6000);})
+        $("#button_holder").delay(700).fadeToggle(600);
+        $("#mobile_warning").delay(700).fadeToggle(600);
+        })
       });
 		</script>
-    <script type="text/javascript">
+    <script id="disappears">
     $(document).ready(function someFunc() {
       $("button").click(function() {
         var test = $("body").css("background-color", "white");
@@ -31,10 +33,11 @@
         <video autoplay="autoplay" muted loop>
           <source src="./videos/4k_optical_20_color.mp4" type="video/mp4">
         </video>
-        <p><i>please enter paikka via desktop</i></p>
+        <p id="mobile_warning">please enter paikka via desktop</p>
       <div id="button_holder">
         <button onclick="someFunc()">enter</button>
       </div>
+      <p id="contact">sitebuild by:<a href="http://instagram.com/temporary_files" target="_blank"><i>@temporary_files<i></a> </p>
     </div>
   </body>
 </html>
