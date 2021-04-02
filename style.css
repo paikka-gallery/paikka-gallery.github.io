@@ -1,45 +1,76 @@
-body{
+*{
   background-color: white;
   overflow: hidden;
 }
 
-#cim_holder{
-display: none;
+@media screen and (min-width: 1367px) {
+  .video_holder {
+    display: block;
+    left:0%;
+    bottom: 0%;
+    position:fixed;
+    margin:auto;
+    padding: auto;
+    animation: fadeInAnimation ease 15s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;}
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;}
+        80% {opacity:1;}
+        100% {
+            opacity: 1;
+         }
+    }
+  video{
+    width:100%;
+    height:140%;
+    margin:auto;
+  }
+  button{
+    width:100px;
+    height:20px;
+    position: fixed;
+    margin:auto;
+    bottom:5%;
+    left:20%;
+    right:20%;
+    padding:auto;
+  }
+  p{
+    display: none;
+  }
 }
 
-#button_holder{
-  display: none;
-}
 
- video{
-   width:100%;
-   height:140%;
-   margin:auto;
- }
-#video_holder {
-  left:0%;
-  bottom: 0%;
-  position:fixed;
-  margin:auto;
-  padding: auto;
-  animation: fadeInAnimation ease 15s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;}
-    80% {opacity:1;}
-    100% {
-        opacity: 1;
-     }
-}
-
-button{
-  width:100px;
-  height:20px;
-  position: fixed;
-  margin-left:45%;
-  bottom:5%;
-  padding:auto;
+@media screen and (max-width: 1366px) {
+  .video_holder {
+    display: block;
+    left:0%;
+    margin:auto;
+    padding: auto;
+    animation: fadeInAnimation ease 15s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;}
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;}
+        80% {opacity:1;}
+        100% {
+            opacity: 1;
+         }
+    }
+    p{
+      font-size: 130%;
+      text-align: center;
+      display: fixed;
+    }
+    video{
+      width:100%;
+      height:140%;
+      margin:auto;
+    }
+    button{
+      display:none;
+    }
 }

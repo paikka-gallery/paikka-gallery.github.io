@@ -1,3 +1,10 @@
+<!--NEEEDS FIX:
+//help button add + arrow keys hint + reference of creator
+//displaced css on mobile
+//pls enter via desktop on main page OR os triggered sign, fading page,...-->
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,12 +15,6 @@
     <script src="./scripts/aframe.min.js"></script>
     <script src="./scripts/link-controls.js"></script>
     <script src="./scripts/jquery.min.js"></script>
-<!--<script src="./scripts/aframe-video-controls.min.js"></script>
-    <script src="./scripts/hls.min.js"></script>
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/shaka-player.compiled.js"></script>
-    <script src="./scripts/shaka-loader.js"></script>
-   <link rel="stylesheet" href="../../styles/style.css">-->
    </script>
    <script>
   AFRAME.registerComponent("mylink", {
@@ -26,35 +27,15 @@
 </script>
   </head>
   <body>
-<!--    <audio id="gallery" preload="auto">
-			<source src="./audio/test.mp3" type="audio/mp3">
-		</audio>-->
-  <!--  <script type="text/javascript">
-    function init() {
-      scene = new THREE.Scene();
-
-      renderer = new THREE.WebGLRenderer({antialias:true});
-      renderer.setSize(window.innerWidth,window.innerHeight);
-      document.body.appendChild(renderer.domElement);
-
-      const loader = new THREE.FBXLoader();
-      loader.load(
-        './gltf_files/mug.fbx',
-        function(fbx){
-        bogre = fbx.scene.children[0];
-        /*bogre.scale.set(1.5,1.5,1.5);*/
-        scene.add(fbx.scene);
-        });
-      }
-      init();
-    </script>-->
 <!--MAIN SCENE SETTINGS-->
     <a-scene renderer="antialias: true; colorManagement: true; sortObjects: true; highRefreshRate: true; physicallyCorrectLights: true; castShadow: true"
-              light="defaultLightsEnabled: false;"
-              background="color:black;"
-              loading-screen="dotsColor: black; backgroundColor: white; enabled:true"
-              cursor="rayOrigin: mouse;"
-              raycaster="far: 100; objects: [link]">
+             keyboard-shortcuts="enterVR: false;"
+  	         vr-mode-ui="enabled: false;"
+             light="defaultLightsEnabled: false;"
+             background="color:black;"
+             loading-screen="dotsColor: black; backgroundColor: white; enabled:true"
+             cursor="rayOrigin: mouse;"
+             raycaster="far: 100; objects: [link]">
 <!--LOADING IN ASSETS-->
       <a-assets>
         <a-asset-item id="gallery" src="./gltf_files/gallery_text5.gltf"></a-asset-item>
@@ -69,53 +50,13 @@
       </a-assets>
 <!--TWEAKING ASSETS' BEHAVIOUR-->
       <a-entity camera look-controls active="true" wasd-controls="fly:true; acceleration:500" position="50 -80 600" ></a-entity>
-
-    <!--   <a-entity geometry="primitive: box" material="color: red"
-        position="0 -100 0" scale: "100 100 100" sound="src: #universe;
-             rolloffFactor: 5;
-             maxDistance:10;"></a-entity>-->
       <a-entity id="scene_holder" rotation="-20 227 0">
-        <!--  <a-entity position="0 -30 0"
-          rotation="0 40 0"
-           scale="4.2 4.2 4.2"
-                    text="font: roboto; value:OPEN CALL for creators
-                                                        to transform this space into a new one
-                                                        We wish to give a real-life platform for artists and artist groups that challenges the notion of topics such as cyberspace, Virtual Reality, Artificial Intelligence, Industry 4.0 and anything that   explores the                               connection of
-                                                        humans and                                         technology.
-                                                        Upload your project  proposals <hova˃ until <dátum˃ including:
-
-                                                        -	your/your group name, and e-mail address
-                                                        -	concept of your exhibition
-                                                        -	description of the devices you wish to use (installations, screens, sounds, etc.)
-                                                        -	materials and additional costs you need to implement your idea.
-                                                        Download the floorplan of the gallery from <here˃.;
-                                                         width:1000;">
-          </a-entity>-->
           <!-- animation="property: rotation; to: 0 360; loop: true; dur: 15"> //EZ EGY NAGYON SZÉP BUG:DURATION SET TO LOW VALUE MEANS GLITCHING TEXTURES
           </a-entity> -->
-
-      <!--    <a-entity position="-9.92711 9.64771 -70" rotation="-90 20 0" scale="0.13 0.13 0.13" text="value: OPEN CALL for creators
-                                                        to transform this space into a new one
-                                                        We wish to give a real-life platform for artists and artist groups that challenges the notion of topics such as cyberspace, Virtual Reality, Artificial Intelligence, Industry 4.0 and anything that explores the connection of humans and technology.
-                                                        Upload your project proposals <hova˃ until <dátum˃ including
-                                                        -	your/your group name, and e-mail address
-                                                        -	concept of your exhibition
-                                                        -	description of the devices you wish to use (installations, screens, sounds, etc.)
-                                                        -	materials and additional costs you need to implement your idea.
-                                                        Download the floorplan of the gallery from <here˃.; width: 1000" visible=""
->
-</a-entity>-->
           <a-sky src="#background"
                  rotation="000 20 -300"
                  animation="property: rotation; to: 0 360 0; loop: true; dur: 150000">
           </a-sky>
-    <!--      <a-sound
-            src="#gallery"
-            autoplay="true"
-            loop="true"
-            volume="3"
-            position="29.681 17.386 -71.697">
-          </a-sound>-->
           <a-entity gltf-model="#gallery"
                     scale="5.5 5.5 5.5"
                     position="0 -95 0"

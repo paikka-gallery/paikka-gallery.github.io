@@ -6,7 +6,6 @@
     <title>PAIKKA</title>
     <script src="./scripts/jquery.min.js"></script>
     <link rel="stylesheet" href="./style.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <script id="megjelenik">
 		$(document).ready(function(){
 				$("#cim_holder").delay(1000).fadeIn(1500);
@@ -17,25 +16,25 @@
 		</script>
   </head>
   <body>
-    <div id="video_holder">
-			<video id="video_homepage" autoplay="autoplay" muted loop>
-			  <source src="./videos/4k_optical_20_color.mp4" type="video/mp4">
-			</video>
+    <div class="video_holder">
+        <video autoplay="autoplay" muted loop>
+          <source src="./videos/4k_optical_20_color.mp4" type="video/mp4">
+        </video>
+        <p><i>please enter paikka via desktop</i></p>
+      <div id="button_holder">
+        <button onclick="someFunc()">enter</button>
+      </div>
+      <script type="text/javascript">
+      $(document).ready(function someFunc() {
+        $("button").click(function() {
+          var test = $("body").css("background-color", "white");
+          test.delay(1500).fadeOut(1500);
+          test.queue(function() {
+            window.location.href='./main.html';
+            });
+          });
+        });
+      </script>
     </div>
-    <div id="button_holder">
-      <button onclick="someFunc()">enter</button>
-    </div>
-    <script type="text/javascript">
-    $(document).ready(function someFunc() {
-      $("button").click(function() {
-        var test = $("body").css("background-color", "white");
-        test.delay(1500).fadeOut(1500);
-        test.queue(function() {
-          window.location.href='./main.html';
-    });
-  });
-});
-    </script>
-
   </body>
 </html>
