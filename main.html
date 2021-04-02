@@ -8,7 +8,6 @@
     <script src="./scripts/aframe.min.js"></script>
     <script src="./scripts/link-controls.js"></script>
     <script src="./scripts/jquery.min.js"></script>
-   </script>
    <script>
   AFRAME.registerComponent("mylink", {
     init: function() {
@@ -17,7 +16,49 @@
     })
     }
   })
-</script>
+  </script>
+  <script>
+  var favicon_images = [
+                  './images/1.gif',
+                  './images/2.gif',
+                  './images/3.gif',
+                  './images/4.gif',
+                  './images/5.gif',
+                  './images/6.gif',
+                  './images/7.gif',
+                  './images/8.gif',
+                  './images/9.gif',
+                  './images/10.gif',
+                  './images/11.gif',
+                  './images/12.gif',
+                  './images/13.gif',
+                  './images/14.gif',
+                  './images/15.gif',
+                  './images/16.gif',
+                  './images/17.gif',
+                  './images/18.gif'
+              ],
+  image_counter = 0; // To keep track of the current image
+
+setInterval(function() {
+  // remove current favicon
+  if(document.querySelector("link[rel='icon']") !== null)
+      document.querySelector("link[rel='icon']").remove();
+  if(document.querySelector("link[rel='shortcut icon']") !== null)
+      document.querySelector("link[rel='shortcut icon']").remove();
+
+  // add new favicon image
+  document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+  // If last image then go to first image
+  // Else go to next image
+  if(image_counter == favicon_images.length -1)
+      image_counter = 0;
+  else
+      image_counter++;
+}, 1);
+
+  </script>
   </head>
   <body>
 <!--MAIN SCENE SETTINGS-->
