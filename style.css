@@ -6,8 +6,9 @@
 @media screen and (min-width: 1366px) {
   .video_holder {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 0%;
+    bottom:0%;
     margin: auto;
     padding: auto;
     animation: fadeInAnimation ease 15s;
