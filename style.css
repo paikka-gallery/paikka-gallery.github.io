@@ -5,10 +5,10 @@
 
 @media screen and (min-width: 1366px) {
   .video_holder {
-    display: block;
     position: fixed;
     left: 0%;
-    bottom:0%;
+    right: 0%;
+    bottom: 0%;
     margin: auto;
     padding: auto;
     animation: fadeInAnimation ease 15s;
@@ -27,12 +27,12 @@
     height: 140%;
     margin: auto;
   }
+
   button{
+    position: fixed;
     width: 100px;
     height: 20px;
-    position: fixed;
-    display: inline;
-    margin:auto;
+    margin: auto;
     bottom: 5%;
     left: 20%;
     right: 20%;
@@ -64,12 +64,12 @@
          }
     }
     #mobile_warning{
+      position: relative;
       font-size: 70%;
       top:40%;
       text-align: center;
       text-transform: uppercase;
       font-style: italic;
-      position: relative;
     }
     video{
       width: 100%;
