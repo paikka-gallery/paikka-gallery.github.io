@@ -7,33 +7,6 @@
     <link rel="icon" href="./images/favicon.gif" type="image/gif">
     <script src="./scripts/jquery.min.js"></script>
     <link rel="stylesheet" href="./2d.css"/>
-    <script>
-      var images = [
-                      './images/1.png',
-                      './images/2.png',
-                      './images/3.png',
-                      './images/4.png',
-                      './images/5.png',
-                      './images/6.png',
-                      './images/7.png',
-                      './images/8.png',
-                      './images/9.png',
-                      './images/10.png'
-                  ],
-      image_counter = 0; // To keep track of the current image
-
-    setInterval(function() {
-      // add new favicon image
-      document.querySelector("body").insertAdjacentHTML('beforeend', '<img src="' + images[image_counter] + '" type="image/png">');
-
-      // If last image then go to first image
-      // Else go to next image
-      if(image_counter == images.length -1)
-          image_counter = 0;
-      else
-          image_counter++;
-    }, 100);
-      </script>
   </head>
   <body>
   </body>
