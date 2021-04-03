@@ -13,7 +13,7 @@
         $("#button_holder").delay(1000).fadeIn(1500);*/
         setInterval(function(){
         $("#button_holder").delay(700).fadeToggle(600);
-        $("#mobile_warning").delay(700).fadeToggle(600);
+        $(".mobile_warning").delay(700).fadeToggle(600);
         })
       });
 		</script>
@@ -73,14 +73,17 @@
   </head>
   <body>
     <div class="video_holder">
-        <video autoplay="autoplay" muted loop>
-          <source src="./videos/4k_optical_20_color.mp4" type="video/mp4">
-        </video>
-        <p id="mobile_warning">please enter paikka via desktop</p>
-      <div id="button_holder">
-        <button onclick="someFunc()">enter</button>
-      </div>
-      <p id="contact">sitebuild by:<a href="http://instagram.com/temporary_files" target="_blank"><i>@temporary_files<i></a> </p>
+      <video autoplay="autoplay" muted loop>
+        <source src="./videos/4k_optical_20_color.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div id="button_holder">
+      <button onclick="someFunc()">enter</button>
+    </div>
+    <div class="mobile_warning">
+      <p>please enter paikka via desktop</p>
+    </div>
+    <div id="contact">sitebuild by:<a href="http://instagram.com/temporary_files" target="_blank">@temporary_files</a>
     </div>
   </body>
 </html>
