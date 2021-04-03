@@ -12,18 +12,29 @@
 			/*	$("#cim_holder").delay(1000).fadeIn(1500);
         $("#button_holder").delay(1000).fadeIn(1500);*/
         setInterval(function(){
-        $("#button_holder").delay(700).fadeToggle(600);
+        $("#button_holder").delay(700).fadeToggle(3000);
         $(".mobile_warning").delay(700).fadeToggle(600);
         })
       });
 		</script>
-    <script id="disappears">
-    $(document).ready(function someFunc() {
-      $("button").click(function() {
+    <script>
+    $(document).ready(function opener_vr() {
+      $("#subpage_vr").click(function() {
         var test = $("body").css("background-color", "white");
         test.delay(1500).fadeOut(1500);
         test.queue(function() {
-          window.location.href='./main.html';
+          window.location.href='./vr.html';
+          });
+        });
+      });
+    </script>
+    <script>
+    $(document).ready(function opener_2d() {
+      $("#subpage_2d").click(function() {
+        var test = $("body").css("background-color", "white");
+        test.delay(1500).fadeOut(1500);
+        test.queue(function() {
+          window.location.href='./2d.html';
           });
         });
       });
@@ -78,12 +89,14 @@
       </video>
     </div>
     <div id="button_holder">
-      <button onclick="someFunc()">enter</button>
+      <button id="subpage_vr" onclick="opener_vr()">enter VR</button>
+      <button id="subpage_2d" onclick="opener_2d()">enter 2D</button>
     </div>
     <div class="mobile_warning">
       <p>please enter paikka via desktop</p>
     </div>
-    <div id="contact">sitebuild by:<a href="http://instagram.com/temporary_files" target="_blank">@temporary_files</a>
+    <div id="contact">sitebuild by:
+      <a href="http://instagram.com/temporary_files" target="_blank">@temporary_files</a>
     </div>
   </body>
 </html>

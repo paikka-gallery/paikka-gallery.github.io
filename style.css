@@ -31,14 +31,23 @@
     margin: 0%;
     overflow: hidden;
   }
-  button{
+  #subpage_vr{
     position: absolute;
     width: 100px;
     height: 20px;
     margin: auto;
-    bottom: 5%;
-    left: 20%;
-    right: 20%;
+    bottom: 13%;
+    left: 33%;
+    padding: auto;
+  }
+
+  #subpage_2d{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    margin: auto;
+    bottom: 13%;
+    right: 33%;
     padding: auto;
   }
   p{
