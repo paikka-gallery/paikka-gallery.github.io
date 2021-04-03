@@ -3,7 +3,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 993px) {
   .video_holder {
     position: absolute;
     display: block;
@@ -46,7 +46,7 @@
   }
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 992px) {
   .video_holder {
     position: absolute;
     display: block;
