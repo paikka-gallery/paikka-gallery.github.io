@@ -1,0 +1,76 @@
+@import "compass/css3";
+
+
+*{
+  box-sizing: border-box;
+  color: red;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: auto;
+}
+
+html,
+body{
+  background-color: white;
+  /*width:100%;*/
+}
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  margin: auto;
+  padding:auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(red, yellow);
+  /*background-image: url("../images/top.png");*/
+}
+
+.parallax__layer{
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+
+    img{
+      width:100%;
+      display: block;
+      position: absolute;
+      bottom: 0;
+
+    }
+  }
+
+.content{
+  background-color: white;
+  position: relative;
+  display: block;
+  margin-top: 180vh;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  width:100%;
+  z-index: 2;
+  // background-image: url("../images/bottom.png");
+  background-color: white;
+}
+
+$parallax__layers:13;
+/*$parallax__amount: 20;*/
+
+@for $i from 0 through $parallax__layers {
+  $x: ($parallax__layers - $i) / 2;
+  .parallax__layer__#{$i}{
+     transform: translateZ(-100 * $x#{px}) scale($x + 1);
+     /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
+  }
+}
