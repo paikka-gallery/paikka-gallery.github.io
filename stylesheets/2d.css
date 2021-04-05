@@ -1,151 +1,260 @@
-/* line 4, ../sass/2d.scss */
+/* line 3, ../sass/2d.scss */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 7, ../sass/2d.scss */
 * {
   box-sizing: border-box;
-  color: red;
-  overflow: hidden;
   width: auto;
   height: auto;
   margin: auto;
-  padding: auto;
 }
 
-/* line 14, ../sass/2d.scss */
-html,
-body {
-  background-color: white;
-  /*width:100%;*/
-}
-
-/* line 20, ../sass/2d.scss */
-.parallax {
+/* line 18, ../sass/2d.scss */
+#title {
+  display: inline;
   perspective: 100px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
-  margin: auto;
-  padding: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  margin-bottom: 20%;
+}
+
+/* line 32, ../sass/2d.scss */
+.parallax {
+  display: inline;
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-image: radial-gradient(#ff0000, #ffff00);
-  /*background-image: url("../images/top.png");*/
 }
 
-/* line 36, ../sass/2d.scss */
+/* line 46, ../sass/2d.scss */
 .parallax__layer {
   position: absolute;
-  top: 0;
+  width: 100%;
+  height: 100%;
   right: 0;
-  bottom: 0;
   left: 0;
 }
-/* line 44, ../sass/2d.scss */
+/* line 54, ../sass/2d.scss */
 .parallax__layer img {
   width: 100%;
   display: block;
   position: absolute;
-  bottom: 0;
-}
-
-/* line 53, ../sass/2d.scss */
-.content {
-  background-color: white;
-  position: relative;
-  display: block;
-  margin-top: 180vh;
   left: 0;
   right: 0;
-  min-height: 100vh;
-  width: 100%;
-  z-index: 2;
-  background-color: white;
 }
 
-/*$parallax__amount: 20;*/
-/* line 72, ../sass/2d.scss */
+/* line 65, ../sass/2d.scss */
+.content {
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  position: absolute;
+  display: block;
+  z-index: 2;
+}
+
+/* line 74, ../sass/2d.scss */
+#content_welcome {
+  padding: 9%;
+  margin-top: 50%;
+  min-height: 90vh;
+  left: 0;
+  right: 0;
+  width: 40%;
+  background-color: white;
+}
+/* line 83, ../sass/2d.scss */
+#content_welcome section {
+  font-size: 560%;
+}
+/* line 88, ../sass/2d.scss */
+#content_welcome p#welcome {
+  padding-left: 30%;
+  font-size: 140%;
+}
+
+/* line 94, ../sass/2d.scss */
+#content_begin {
+  font-size: 150%;
+  padding: .5%;
+  margin-top: 150%;
+  min-height: 51vh;
+  height: 200%;
+  width: 100%;
+  background-color: #e6f0ff;
+}
+
+/* line 104, ../sass/2d.scss */
+#content_end {
+  margin-top: 200%;
+  height: 40%;
+  margin-left: 40%;
+  width: 50%;
+  color: white;
+  background-color: black;
+  padding: 3%;
+}
+
+/* line 115, ../sass/2d.scss */
+button {
+  margin-top: 10%;
+}
+
+/* line 119, ../sass/2d.scss */
+.parallax2 {
+  perspective: 90px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  margin-top: 100%;
+  padding: auto;
+  left: 0;
+  right: 0;
+}
+
+/* line 132, ../sass/2d.scss */
+.parallax__layer2 {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+  padding: auto;
+}
+
+/* line 141, ../sass/2d.scss */
+img {
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* line 156, ../sass/2d.scss */
 .parallax__layer__0 {
+  transform: translateZ(-750px) scale(8.5);
+  /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
+}
+
+/* line 156, ../sass/2d.scss */
+.parallax__layer__1 {
+  transform: translateZ(-700px) scale(8);
+  /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
+}
+
+/* line 156, ../sass/2d.scss */
+.parallax__layer__2 {
   transform: translateZ(-650px) scale(7.5);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__1 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__3 {
   transform: translateZ(-600px) scale(7);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__2 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__4 {
   transform: translateZ(-550px) scale(6.5);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__3 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__5 {
   transform: translateZ(-500px) scale(6);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__4 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__6 {
   transform: translateZ(-450px) scale(5.5);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__5 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__7 {
   transform: translateZ(-400px) scale(5);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__6 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__8 {
   transform: translateZ(-350px) scale(4.5);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__7 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__9 {
   transform: translateZ(-300px) scale(4);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__8 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__10 {
   transform: translateZ(-250px) scale(3.5);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__9 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__11 {
   transform: translateZ(-200px) scale(3);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__10 {
+/* line 156, ../sass/2d.scss */
+.parallax__layer__12 {
   transform: translateZ(-150px) scale(2.5);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }
 
-/* line 72, ../sass/2d.scss */
-.parallax__layer__11 {
-  transform: translateZ(-100px) scale(2);
-  transform: translateX(6px) scale(1);
-  /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
-}
-
-/* line 72, ../sass/2d.scss */
-.parallax__layer__12 {
-  transform: translateZ(-50px) scale(1.5);
-  transform: translateX(6px) scale(1);
-  /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
-}
-
-/* line 72, ../sass/2d.scss */
+/* line 156, ../sass/2d.scss */
 .parallax__layer__13 {
+  transform: translateZ(-100px) scale(2);
+  /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
+}
+
+/* line 156, ../sass/2d.scss */
+.parallax__layer__14 {
+  transform: translateZ(-50px) scale(1.5);
+  /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
+}
+
+/* line 156, ../sass/2d.scss */
+.parallax__layer__15 {
+  transform: translateZ(0px) scale(1);
+  /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
+}
+
+/* line 164, ../sass/2d.scss */
+.parallax__layer2__0 {
+  transform: translateZ(-100px) scale(2);
+  /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
+}
+
+/* line 164, ../sass/2d.scss */
+.parallax__layer2__1 {
+  transform: translateZ(-50px) scale(1.5);
+  /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
+}
+
+/* line 164, ../sass/2d.scss */
+.parallax__layer2__2 {
   transform: translateZ(0px) scale(1);
   /* background-color: rgba(15,100,1,(1 + $i) / 100);*/
 }

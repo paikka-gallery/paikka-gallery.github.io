@@ -3,8 +3,8 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 993px) {
-  .video_holder {
+@media screen and (min-width: 1025px) {
+  #video_holder {
     position: absolute;
     display: block;
     bottom:0%;
@@ -36,7 +36,7 @@
     width: 100px;
     height: 20px;
     margin: auto;
-    bottom: 13%;
+    bottom: 10%;
     left: 33%;
     padding: auto;
   }
@@ -46,17 +46,17 @@
     width: 100px;
     height: 20px;
     margin: auto;
-    bottom: 13%;
+    bottom: 10%;
     right: 33%;
     padding: auto;
   }
-  p{
+  #mobile_warning{
     display: none;
   }
 }
 
-@media screen and (max-width: 992px) {
-  .video_holder {
+@media screen and (max-width: 1024px) {
+  #video_holder {
     position: absolute;
     display: block;
     top:0%;
@@ -77,17 +77,17 @@
             opacity: 1;
          }
     }
-    .mobile_warning{
+    #mobile_warning{
       position: absolute;
       display:block;
-      font-size: 80%;
-      width:40%;
+      font-size: 90%;
+      width:50%;
       left:0%;
       right:0%;
       top:15%;
       margin:auto;
       text-align: center;
-      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
       font-style: italic;
     }
     video{
@@ -96,14 +96,26 @@
       margin: 0%;
       overflow: hidden;
     }
-    button{
-      display: none;
+
+    #subpage_vr{
+      display:none;
+    }
+
+    #subpage_2d{
+      position: absolute;
+      width: 25%;
+      height: 2.5%;
+      margin:auto;
+      bottom: 20%;
+      margin-left:36.5%;
+
     }
 }
 
 #contact{
+  font-family: 'Raleway', sans-serif;
   font-style: italic;
-  font-weight: lighter;
+  font-size: 90%;
   bottom: 1%;
   right: 1%;
   display: block;

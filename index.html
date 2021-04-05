@@ -7,13 +7,15 @@
     <link rel="icon" href="./images/favicon.gif" type="image/gif">
     <script src="./scripts/jquery.min.js"></script>
     <link rel="stylesheet" href="./stylesheets/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100;1,200;1,300&display=swap" rel="stylesheet">
  <script id="flashing">
 		$(document).ready(function(){
 			/*	$("#cim_holder").delay(1000).fadeIn(1500);
         $("#button_holder").delay(1000).fadeIn(1500);*/
         setInterval(function(){
         $("#button_holder").delay(700).fadeToggle(3000);
-        $(".mobile_warning").delay(700).fadeToggle(600);
+        $(".mobile_warning").delay(700).fadeToggle(3000);
         })
       });
 		</script>
@@ -41,7 +43,7 @@
     </script>
   </head>
   <body>
-    <div class="video_holder">
+    <div id="video_holder">
       <video autoplay="autoplay" muted loop>
         <source src="./videos/4k_optical_20_color.mp4" type="video/mp4">
       </video>
@@ -50,10 +52,10 @@
       <button id="subpage_vr" onclick="opener_vr()">enter VR</button>
       <button id="subpage_2d" onclick="opener_2d()">enter 2D</button>
     </div>
-    <div class="mobile_warning">
-      <p>please enter paikka via desktop</p>
+    <div id="mobile_warning_holder">
+      <p id="mobile_warning">for VR experience,<br> please enter PAIKKA via desktop</p>
     </div>
-    <div id="contact">sitebuild by:
+    <div id="contact">sitebuild with ♥ by:
       <a href="http://instagram.com/temporary_files" target="_blank">@temporary_files</a>
     </div>
   </body>
