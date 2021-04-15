@@ -1,19 +1,37 @@
 @import "compass/css3";
 
-*::-webkit-scrollbar {
-    display: none;
-}
+        /* Designing for scroll-bar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
 
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: gainsboro;
+            border-radius: 5px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: black;
+            border-radius: 7px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
 *{
   box-sizing: border-box;
+
   width: auto;
   height: auto;
   margin: auto;
 }
-
- body{
-   padding-top: 20%;
- }
+ //
+ // body{
+ //   padding-top: 20%;
+ // }
 
  // #title {
  //   display: inline;
@@ -76,11 +94,12 @@
   font-style: italic;
   position: absolute;
   display: block;
+  padding-right: 5%;
   }
 
 #content_welcome{
   padding: 9%;
-  margin-top: 70%;
+  margin-top: 56.3%;
   min-height: 90vh;
   left: 0;
   right: 0;
@@ -118,7 +137,7 @@
   margin-top: 150%;
   width: 100%;
   margin-left: 10%;
-  background-color: #e6f0ff;
+  background-color: white;
 
   p#wish{
     padding-left:5%;
@@ -147,7 +166,7 @@
 
 button{
     position:fixed;
-    margin-top: 225%;
+    margin-top: 20%;
     margin-left: 45%;
     height: 5vh;
     width: 25vh;

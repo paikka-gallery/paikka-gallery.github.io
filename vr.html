@@ -7,23 +7,37 @@
     <title>paikka open call 2021</title>
     <link rel="icon" href="./images/favicon.gif" type="image/gif">
     <script src="./scripts/aframe.min.js"></script>
-    <script src="./scripts/link-controls.js"></script>
-  <!--  <script src="./scripts/jquery.min.js"></script>
-   <script>
-  AFRAME.registerComponent("mylink", {
-    init: function() {
-    this.el.addEventListener("click", (e)=> {
-          window.location = this.data.href;
-    })
-    }
-  })
-  </script> -->
   </head>
   <body>
+  <script src="./scripts/aframe-href-component.js"></script>
+  <script>
+  AFRAME.registerComponent('foo', {
+    init: function() {
+      this.el.addEventListener('click', (e) => {
+        window.open('https://forms.gle/KGTbDyUfQrHJ7A3i6');
+      })
+    }
+  })
+</script>
+<script>
+AFRAME.registerComponent('foo2', {
+  init: function() {
+    this.el.addEventListener('click', (e) => {
+      window.open('https://drive.google.com/file/d/18qJ3XfgDf755HquJMLAbPrceaIqmdIau/view?usp=sharing');
+    })
+  }
+})
+</script>
+<style media="screen">
+.a-loader-title {
+color: white;
+font-style: italic;
+}
+</style>
 <!--MAIN SCENE SETTINGS-->
-    <a-scene renderer="antialias: false; colorManagement: true; sortObjects: false; highRefreshRate: false; physicallyCorrectLights: true; logarithmicDepthBuffer:true; precision:low;"
+    <a-scene renderer="antialias: false; colorManagement: true; sortObjects: false; highRefreshRate: false; physicallyCorrectLights: true;"
              keyboard-shortcuts="enterVR: true;"
-  	         vr-mode-ui="enabled: true;"
+  	         vr-mode-ui="enabled: false;"
              light="defaultLightsEnabled: false;"
              background="color:black;"
              loading-screen="dotsColor: black; backgroundColor: white; enabled:true"
@@ -64,14 +78,16 @@
                     position="0 -95 0"
                     rotation="-3 0 0"
                     animation="property: rotation; to: 0 360 0; loop: true; dur: 150000"
-                    link="href: https://forms.gle/KGTbDyUfQrHJ7A3i6; title: enter upload section;">
+                    link="href:"
+                    foo>
           </a-entity>
           <a-entity gltf-model="#dirt"
                     scale="5.5 5.5 5.5"
                     position="0 -95 0"
                     rotation="-3 0 0"
                     animation="property: rotation; to: 0 360 0; loop: true; dur: 150000"
-                    link="href: https://drive.google.com/file/d/18qJ3XfgDf755HquJMLAbPrceaIqmdIau/view?usp=sharing; title: floorplan;">
+                    link="href:"
+                    foo2>
           </a-entity>
           <!--<a-entity text="value: welcome to paikka,
             seems a little quiet here, how about some flying?"
