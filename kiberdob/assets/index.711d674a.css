@@ -20,7 +20,7 @@ main{
   z-index:99;
   width:100%;
   margin:auto;
-  padding:120px 0;
+  padding:15% 0;
   display:grid;
   grid-template-columns:repeat(12,1fr)}
 
@@ -66,11 +66,11 @@ blockquote{
   margin-bottom:var(--spacing);
   font-size:185%;
   color:#fff;
-  margin-right:40%}
+  margin-right:40%;}
 
   blockquote p{
     display:inline;
-    line-height:1}
+    line-height:1;}
 
 .introduction{
   margin-top:0%;
@@ -83,7 +83,7 @@ blockquote{
     margin-right:20%;
     margin-left: 0%;
     background-color: transparent;
-    font-style: italic;
+    /* font-style: italic; */
     margin-bottom: 40%;
     }}
 
@@ -109,9 +109,14 @@ blockquote{
 
 .heterotopia{
   padding:2%;
+  padding-top: 0%;
   margin-left:50%;
   margin-right:-50%;
   background:var(--dark-bg)}
+
+h2{
+  padding-top: 0%;
+}
 
 @media screen and (max-width: 1024px) {.heterotopia{
   min-width: 90%;
@@ -144,7 +149,8 @@ blockquote{
 
   @media screen and (max-width: 1024px) {.proposal{
     min-width: 90%;
-    margin: auto;
+    margin-right:35%;
+    margin-left: -5%;
     padding-top: 0%;
     padding-left: 4%;
   }}
@@ -165,9 +171,7 @@ blockquote{
     background-color: transparent;
   }}
 
-@media screen and (max-width: 1024px) {.meet{
-  min-width: 60%;
-  }}
+
 
 .meet{
   padding:0;
@@ -175,6 +179,14 @@ blockquote{
   font-size:350%;
   color:#fff;
   margin-bottom:0%}
+
+  @media screen and (max-width: 1024px) {.meet{
+    margin-top: 30%;
+    margin-bottom: 30%;
+    min-width: 60%;
+    /* margin-left: -20%; */
+    grid-column: 5 / span 9;
+    }}
 
 .name_container{
   min-width: 90%;
@@ -195,9 +207,12 @@ blockquote{
     min-width: 120%;
     padding:0%;
     margin-left: -30%;
+    margin-bottom: 30%;
     }}
 
-#Janos{padding:2%;
+
+#Janos{
+  padding:2%;
   margin-left:50%;
   margin-right:-40%;
   background:var(--dark-bg);
@@ -207,9 +222,11 @@ margin-bottom: 0%;}
   min-width: 100%;
   padding:4%;
   padding-top: 0.1%;
-  margin-right: -20%;
-  margin-left: 0%;
+  margin-right: 50%;
+  margin-left: -50%;
   }}
+
+
 
 #Mili{
   margin-top: 0%;
@@ -220,6 +237,7 @@ margin-bottom: 0%;}
   margin-bottom: 10%;}
 
   @media screen and (max-width: 1024px) {#Mili{
+    margin-top: -30%;
     min-width: 120%;
     padding:0%;
     }}
@@ -240,14 +258,22 @@ margin-bottom: 0%;}
   }}
 
 .closing{
+   /* margin:0;
+  padding:0;
+  grid-column:4 / span 9;
+  margin-bottom:var(--spacing);
+  font-size:185%;
+  color:#fff;
+  margin-right:40%; */
   font-size: 110%;
-  grid-column:3 / 9;
-  margin-bottom:-10%;
+  grid-column:3 / span 9;
+  margin-bottom:-15%;
+  margin-right: 0%;
   padding-top: 20%;
-  padding-bottom: -20%;}
+  /* padding-bottom: -20%;} */
 
   @media screen and (max-width: 1024px) {.closing{
-    grid-column:7 / span 9;
-    margin-right: -10%;
-    margin-bottom: -20%;
-  }
+    grid-column:2 / span 9;
+    margin-right: 20%;
+    margin-bottom: -10%;
+  }}
