@@ -8,13 +8,34 @@
     <script type="module" crossorigin src="./assets/index.c94db296.js"></script>
     <link rel="modulepreload" href="./assets/vendor.5829ade8.js">
     <link rel="stylesheet" href="./assets/index.711d674a.css">
+
+    <!-- <script type="text/javascript">
+
+// window.onresize = function(event)
+// {
+// // document.location.reload(true);
+// document.body.style.height = document.getElementById("bg").clientHeight + 4000 + 'px';
+// }
+
+const resizeObserver = new ResizeObserver(entries =>
+  console.log('Body height changed:', entries[0].target.clientHeight)
+);
+
+// start observing a DOM node
+resizeObserver.observe(document.body);
+
+// click anywhere to rnadomize height
+window.addEventListener('click', () =>
+  document.body.style.height = Math.floor((Math.random() * 5000) + 1) + 'px'
+);
+    </script> -->
   </head>
-  <body>
+  <body id="hatter">
     <canvas id="bg"></canvas>
     <main>
       <header>
         <h1>PAIKKA — <span id="title">KIBERDOB</span></h1>
-        <p>What is Kiberdob and who are we?</p>
+        <p id="what_is">What is Kiberdob and who are we?</p>
       </header>
       <blockquote class="introduction">
         <p><i>Kiberdob</i> which literally translates from Hungarian to English as <i>‘cyberdrum’</i>
@@ -109,6 +130,5 @@ Since our project relies on participant inclusion, we need help with the followi
       <blockquote class="closing">© PAIKKA 2021 // <i>sitebuild with ♥️ by <a href="https://instagram.com/temporary_files" target="_blank">Milena</a></i>
       </blockquote>
     </main>
-
   </body>
 </html>
