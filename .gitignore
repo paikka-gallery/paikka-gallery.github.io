@@ -81,3 +81,5 @@ dresscode/image_based/assets/VERA_realin/verarealin/verarealin.obj
 dresscode/image_based/assets/VERA_realin/verarealin_meta_data.xml
 dresscode/image_based/assets/VERA_realin/W_face_west.jpg
 dresscode/image_based/assets/VERA_realin/W_leg_hand_west.jpg
+*.obj
+*.mtl

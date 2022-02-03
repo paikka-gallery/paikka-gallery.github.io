@@ -4,8 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<!-- <script src="./scripts/aframe.min.js"></script> -->
-<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script src="./scripts/aframe.min.js"></script>
 <style>
   .arjs-loader {
     height: 100%;
@@ -43,12 +42,12 @@
 <!-- use rawgithack to retrieve the correct url for nft marker (see 'trex' below) -->
         <a-nft
             type='nft'
-            url='./markers/pinball'
+            url='./nft_marker_assets/picture'
             smooth='true' smoothcount='10' smoothtolerance='0.01' smooththreshold='5'>
             <a-entity
-                gltf-model='./assets/vera.gltf'
+                gltf-model='./gltf/vera.gltf'
                 scale="100 100 100"
-                position="-20 0 0"
+                position="0 0 0"
                 >
             </a-entity>
         </a-nft>
