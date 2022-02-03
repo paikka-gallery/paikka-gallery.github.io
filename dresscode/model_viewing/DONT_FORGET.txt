@@ -1,5 +1,0 @@
-...to:
-bake gltf textures
-compress gltf files
-test gpu coordinates
-test cross browser compatibility
