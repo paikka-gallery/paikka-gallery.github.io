@@ -1,4 +1,0 @@
-...to:
-bake gltf textures
-compress gltf files
-test cross browser compatibility
